@@ -1,0 +1,17 @@
+<table class="table  mt-3">
+  <thead>
+    <tr  class="">
+      <th scope="col">#</th>
+      <th scope="col">Task</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr *ngFor="let task of taskList">
+      <th>{{task.id}}</th>
+      <td>{{task.title}}</td>
+      <td>{{task.completed?"✔ (Done)":"❌ (Failed)"}}</td>
+    </tr>
+
+  </tbody>
+</table>

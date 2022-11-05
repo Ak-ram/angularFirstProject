@@ -1,7 +1,7 @@
   <nav class="bg-primary p-3" style="height: calc(100vh - 95px)">
     <ul class="nav flex-column text-light">
       <li class="py-2" *ngFor="let link of sidebarLinks">
-        <a class="text-light text-decoration-none" href="#">{{link}}</a>
+        <a class="text-light text-decoration-none" href="#" (click)="activate('#custom-link')">{{link}}</a>
       </li>
     </ul>
   </nav>

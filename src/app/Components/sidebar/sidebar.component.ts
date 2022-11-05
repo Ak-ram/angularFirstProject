@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
-  sidebarLinks: string[] = ['Main', 'About', 'Project List'];
+  sidebarLinks: string[] = ['Main', 'Tasks', 'Project List'];
   constructor() {}
   ngOnInit(): void {}
+  activate(target: string) {
+    console.log(target);
+  }
 }
