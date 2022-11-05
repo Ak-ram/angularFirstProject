@@ -45,13 +45,13 @@ export class TasksComponent implements OnInit {
         userId: 1,
         id: 6,
         title: 'qui ullam ratione quibusdam voluptatem quia omnis',
-        completed: false,
+        completed: true,
       },
       {
         userId: 1,
         id: 7,
         title: 'illo expedita consequatur quia in',
-        completed: false,
+        completed: true,
       },
     ];
   }
