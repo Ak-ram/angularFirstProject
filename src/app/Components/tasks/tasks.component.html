@@ -9,7 +9,6 @@
   <tbody class="table-group-divider">
     <tr *ngFor="let task of taskList"
 [ngClass]="task.completed ? 'table-success' : 'table-danger' "
-
     >
       <th>{{task.id}}</th>
       <td>{{task.title}}</td>
