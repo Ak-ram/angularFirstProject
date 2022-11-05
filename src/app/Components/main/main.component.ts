@@ -9,7 +9,7 @@ export class MainComponent implements OnInit {
   constructor() {}
   ngOnInit(): void {}
   // properties
-  isTrue: boolean = true;
+  isTrue: boolean = false;
   // methods (Basiness logic)
   toggle = () => {
     this.isTrue = !this.isTrue;
