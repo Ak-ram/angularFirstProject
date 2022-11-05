@@ -7,7 +7,10 @@
     </tr>
   </thead>
   <tbody class="table-group-divider">
-    <tr *ngFor="let task of taskList" [ngClass]="task.completed ? 'table-success' : 'table-danger' " >
+    <tr *ngFor="let task of taskList"
+[ngClass]="task.completed ? 'table-success' : 'table-danger' "
+
+    >
       <th>{{task.id}}</th>
       <td>{{task.title}}</td>
        <td>
@@ -15,6 +18,11 @@
       </td> 
      
     </tr>
-
+<!--
+  [class.table-dark]="!task.completed"
+  [ngClass]="{'table-danger': !task.completed}"
+  [ngClass]="task.completed ? 'table-success' : 'table-danger' "
+  [ngClass]="{'table-success':task.completed, 'table-danger': !task.completed }"
+  -->
   </tbody>
 </table>
