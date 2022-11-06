@@ -4,6 +4,7 @@
   <option *ngFor="let task of taskStatus" [value]="task.id">{{task.state}}</option>
 </select>
 <p>Filters: <span class="text-primary">{{taskStatus[currentStateIs].state}}</span></p>
+<button class='btn btn-primary' (click)="switch()">Switch</button>
 </div>
 
 <hr />

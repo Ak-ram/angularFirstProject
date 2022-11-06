@@ -65,4 +65,8 @@ export class TasksComponent implements OnInit {
   changeTaskState(id: string) {
     this.currentStateIs = +id;
   }
+  switch() {
+    let current = Boolean(!this.currentStateIs);
+    this.currentStateIs = +current;
+  }
 }
