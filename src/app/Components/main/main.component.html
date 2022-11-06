@@ -1,1 +1,15 @@
-<p>main works!</p>
+<div class="border shadow-sm mt-3 p-2">
+  <h2>Main</h2>
+  Godzilla is an enormous, destructive, prehistoric sea monster awakened and empowered by nuclear radiation.
+  With the nuclear bombings of Hiroshima and Nagasaki and the Lucky Dragon 5 incident
+  still fresh in the Japanese consciousness, Godzilla was conceived as a
+  metaphor for nuclear weapons.[29] Others have suggested that Godzilla
+  is a
+  <span *ngIf="isTrue">metaphor for the United States, a giant beast woken from its slumber which then takes terrible vengeance on Japan.As the film series expanded, some stories took on less serious undertones, portraying Godzilla as an antihero, or a lesser threat who defends humanity. Later films address themes including Japan's forgetfulness over its imperial past, natural disasters, and the human condition.</span>
+  <!-- <a *ngIf="!isTrue" class="link" (click)="toggle()">show more...</a>
+  <a *ngIf="isTrue" class="link" (click)="toggle()">show less...</a> -->
+  <a  class="link-primary" (click)="toggle()">
+    {{isTrue ? "show less": "show more..."}}
+    </a>
+</div>
+
