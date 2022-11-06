@@ -21,14 +21,14 @@
   <tbody class="table-group-divider">
     <tr *ngFor="let task of taskList"
     [ngClass] = "currentStateIs == task.stateId ? '':'d-none'"
-     
+
     >
       <th>{{task.id}}</th>
       <td>{{task.title}}</td>
        <td [ngClass]="task.completed ? 'table-success' : 'table-danger' ">
         {{task.completed?"✔ (Done)":"❌ (Failed)"}}
-      </td> 
-     
+      </td>
+
     </tr>
 <!--
   [class.table-dark]="!task.completed"
