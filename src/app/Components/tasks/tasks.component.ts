@@ -11,6 +11,7 @@ export class TasksComponent implements OnInit {
   ngOnInit(): void {}
   taskList: ITask[];
   taskStatus: ITaskStatus[];
+  currentStateIs: number = 0;
   constructor() {
     this.taskList = [
       {
@@ -57,9 +58,12 @@ export class TasksComponent implements OnInit {
       },
     ];
     this.taskStatus = [
-      { id: 1, status: 'completed' },
-      { id: 2, status: 'Progress' },
-      { id: 3, status: 'Failed' },
+      { id: 0, state: 'completed' },
+      { id: 1, state: 'Progress' },
+      { id: 2, state: 'Failed' },
     ];
+  }
+  changeTaskState(id: string) {
+    this.currentStateIs = +id;
   }
 }
