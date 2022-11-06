@@ -15,43 +15,43 @@ export class TasksComponent implements OnInit {
   constructor() {
     this.taskList = [
       {
-        userId: 0,
+        stateId: 0,
         id: 0,
         title: 'delectus aut autem',
         completed: true,
       },
       {
-        userId: 0,
+        stateId: 0,
         id: 1,
         title: 'quis ut nam facilis et officia qui',
         completed: true,
       },
       {
-        userId: 1,
+        stateId: 1,
         id: 2,
         title: 'fugiat veniam minus',
         completed: false,
       },
       {
-        userId: 1,
+        stateId: 1,
         id: 3,
         title: 'et porro tempora',
-        completed: true,
+        completed: false,
       },
       {
-        userId: 2,
+        stateId: 1,
         id: 4,
         title: 'laboriosam mollitia et enim quasi adipisci',
         completed: false,
       },
       {
-        userId: 3,
+        stateId: 0,
         id: 5,
         title: 'qui ullam ratione quibusdam voluptatem quia omnis',
         completed: true,
       },
       {
-        userId: 3,
+        stateId: 0,
         id: 6,
         title: 'illo expedita consequatur quia in',
         completed: true,
@@ -59,8 +59,7 @@ export class TasksComponent implements OnInit {
     ];
     this.taskStatus = [
       { id: 0, state: 'completed' },
-      { id: 1, state: 'Progress' },
-      { id: 2, state: 'Failed' },
+      { id: 1, state: 'Failed' },
     ];
   }
   changeTaskState(id: string) {
