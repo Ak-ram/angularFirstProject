@@ -16,13 +16,15 @@
       <th scope="col">Status</th>
     </tr>
   </thead>
+  <!-- [ngClass]="task.completed ? 'table-success' : 'table-danger' " -->
   <tbody class="table-group-divider">
     <tr *ngFor="let task of taskList"
-[ngClass]="task.completed ? 'table-success' : 'table-danger' "
+    [ngClass] = "currentStateIs == task.userId ? '':'d-none'"
+     
     >
       <th>{{task.id}}</th>
       <td>{{task.title}}</td>
-       <td>
+       <td [ngClass]="task.completed ? 'table-success' : 'table-danger' ">
         {{task.completed?"✔ (Done)":"❌ (Failed)"}}
       </td> 
      
