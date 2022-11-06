@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ITask } from 'src/app/Models/itask';
+import { ITaskStatus } from 'src/app/Models/itaskStatus';
 
 @Component({
   selector: 'app-tasks',
@@ -9,6 +10,7 @@ import { ITask } from 'src/app/Models/itask';
 export class TasksComponent implements OnInit {
   ngOnInit(): void {}
   taskList: ITask[];
+  taskStatus: ITaskStatus[];
   constructor() {
     this.taskList = [
       {
@@ -53,6 +55,11 @@ export class TasksComponent implements OnInit {
         title: 'illo expedita consequatur quia in',
         completed: true,
       },
+    ];
+    this.taskStatus = [
+      { id: 1, status: 'completed' },
+      { id: 2, status: 'Progress' },
+      { id: 3, status: 'Failed' },
     ];
   }
 }
