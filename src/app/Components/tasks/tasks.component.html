@@ -27,7 +27,7 @@
     <tr 
     *ngIf = "currentStateIs == task.stateId"
     LightBox
-    
+    [highlightColor]="task.completed ? 'text-bg-success' : 'text-bg-danger'"
     >
       <th>{{i+1}}</th>
       <td>{{task.title}}</td>
