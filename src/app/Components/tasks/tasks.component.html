@@ -20,7 +20,7 @@
   <tbody class="table-group-divider">
     <ng-container *ngFor="let task of taskList; index as i;even as isEven"
     >
-    <tr 
+    <tr
     *ngIf = "currentStateIs == task.stateId"
     [ngClass] = "{
       'table-success': task.completed,
@@ -31,8 +31,8 @@
       <td>{{task.title}}</td>
        <td>
         {{task.completed?"✔ (Done)":"❌ (Failed)"}}
-      </td> 
-     
+      </td>
+
     </tr>
     </ng-container>
 <!--
