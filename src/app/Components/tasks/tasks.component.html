@@ -5,7 +5,7 @@
 <select class="form-select" aria-label="Default select example" [(ngModel)]="currentStateIs">
   <option *ngFor="let task of taskStatus" [value]="task.id">{{task.state}}</option>
 </select>
-<button class='btn btn-dark mt-3' (click)="switch()">Switch status</button>
+<button class='btn border border-dark mt-3' (click)="switch()">Switch status</button>
 </div>
 
 <hr />
