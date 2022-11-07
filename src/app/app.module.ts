@@ -9,6 +9,7 @@ import { SidebarComponent } from './Components/sidebar/sidebar.component';
 import { MainComponent } from './Components/main/main.component';
 import { TasksComponent } from './Components/tasks/tasks.component';
 import { FormsModule } from '@angular/forms';
+import { LightBoxDirective } from './Directives/lightbox.directive';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     SidebarComponent,
     MainComponent,
     TasksComponent,
+    LightBoxDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

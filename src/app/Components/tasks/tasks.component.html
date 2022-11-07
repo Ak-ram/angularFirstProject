@@ -11,7 +11,7 @@
 <hr />
 <table class="table ">
   <thead>
-    <tr  class="">
+    <tr>
       <th scope="col">#</th>
       <th scope="col">Task</th>
       <th scope="col">Status</th>
@@ -20,12 +20,14 @@
   <tbody class="table-group-divider">
     <ng-container *ngFor="let task of taskList; index as i;even as isEven"
     >
-    <tr 
-    *ngIf = "currentStateIs == task.stateId"
-    [ngClass] = "{
+    <!-- [ngClass] = "{
       'table-success': task.completed,
       'table-danger': !task.completed
-    }"
+    }" -->
+    <tr 
+    *ngIf = "currentStateIs == task.stateId"
+    LightBox
+    [highlightColor]="task.completed ? 'text-bg-success' : 'text-bg-danger'"
     >
       <th>{{i+1}}</th>
       <td>{{task.title}}</td>
