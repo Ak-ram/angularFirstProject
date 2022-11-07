@@ -17,19 +17,24 @@
       <th scope="col">Status</th>
     </tr>
   </thead>
-  <!-- [ngClass]="task.completed ? 'table-success' : 'table-danger' " -->
   <tbody class="table-group-divider">
-    <tr *ngFor="let task of taskList"
-    [ngClass] = "currentStateIs == task.stateId ? '':'d-none'"
-     
+    <ng-container *ngFor="let task of taskList; index as i;even as isEven"
     >
-      <th>{{task.id}}</th>
+    <tr 
+    *ngIf = "currentStateIs == task.stateId"
+    [ngClass] = "{
+      'table-success': task.completed,
+      'table-danger': !task.completed
+    }"
+    >
+      <th>{{i+1}}</th>
       <td>{{task.title}}</td>
-       <td [ngClass]="task.completed ? 'table-success' : 'table-danger' ">
+       <td>
         {{task.completed?"✔ (Done)":"❌ (Failed)"}}
       </td> 
      
     </tr>
+    </ng-container>
 <!--
   [class.table-dark]="!task.completed"
   [ngClass]="{'table-danger': !task.completed}"
