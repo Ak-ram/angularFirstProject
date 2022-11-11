@@ -8,7 +8,9 @@ import { ITaskStatus } from 'src/app/Models/itaskStatus';
   styleUrls: ['./tasks.component.scss'],
 })
 export class TasksComponent implements OnInit {
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('onInit is firing')
+  }
   taskList: ITask[];
   taskStatus: ITaskStatus[];
   currentStateIs: number = 0;
