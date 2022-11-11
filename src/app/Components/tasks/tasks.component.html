@@ -39,7 +39,7 @@
       >
         <th>{{ i + 1 }}</th>
         <td>{{ task.title }}</td>
-        <td>{{ task.date | ReminderPipe}}</td>
+        <td>{{ task.date | ReminderPipe | uppercase}}</td>
         <td>
           {{ task.completed ? "✔ (Done)" : "❌ (Failed)" }}
         </td>
