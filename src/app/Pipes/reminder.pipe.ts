@@ -4,8 +4,9 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'ReminderPipe',
 })
 export class ReminderPipe implements PipeTransform {
-  transform(value: number): number {
-    let now = Date.now();
-    return Math.floor((now - value) / (24 * 60 * 60 * 1000));
+  transform(value: number): string {
+    let now:number = Date.now();
+    let remind: number = Math.floor((now - value) / (24 * 60 * 60 * 1000));
+    return remind ? `${remind} day` : 'Today';
   }
 }
