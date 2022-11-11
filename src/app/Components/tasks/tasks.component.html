@@ -39,7 +39,7 @@
       >
         <th>{{ i + 1 }}</th>
         <td>{{ task.title }}</td>
-        <td>{{ task.date | date }}</td>
+        <td>{{ task.date | date: "short" }}</td>
         <td>
           {{ task.completed ? "✔ (Done)" : "❌ (Failed)" }}
         </td>
