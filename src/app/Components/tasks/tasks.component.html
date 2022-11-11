@@ -1,47 +1,54 @@
-<div class='mt-3'>
+<div class="mt-3">
   <h2>Filter Tasks</h2>
-<!-- <select class="form-select" aria-label="Default select example" #state
+  <!-- <select class="form-select" aria-label="Default select example" #state
 (change)="changeTaskState(state.value)"> -->
-<select class="form-select" aria-label="Default select example" [(ngModel)]="currentStateIs">
-  <option *ngFor="let task of taskStatus" [value]="task.id">{{task.state}}</option>
-</select>
-<button class='btn border border-dark mt-3' (click)="switch()">Switch status</button>
+  <select
+    class="form-select"
+    aria-label="Default select example"
+    [(ngModel)]="currentStateIs"
+  >
+    <option *ngFor="let task of taskStatus" [value]="task.id">
+      {{ task.state }}
+    </option>
+  </select>
+  <button class="btn border border-dark mt-3" (click)="switch()">
+    Switch status
+  </button>
 </div>
 
 <hr />
-<table class="table ">
+<table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">Task</th>
       <th scope="col">Status</th>
+      <th scope="col">Date</th>
     </tr>
   </thead>
   <tbody class="table-group-divider">
-    <ng-container *ngFor="let task of taskList; index as i;even as isEven"
-    >
-    <!-- [ngClass] = "{
+    <ng-container *ngFor="let task of taskList; index as i; even as isEven">
+      <!-- [ngClass] = "{
       'table-success': task.completed,
       'table-danger': !task.completed
     }" -->
-    <tr 
-    *ngIf = "currentStateIs == task.stateId"
-    LightBox
-    [highlightColor]="task.completed ? 'text-bg-success' : 'text-bg-danger'"
-    >
-      <th>{{i+1}}</th>
-      <td>{{task.title}}</td>
-       <td>
-        {{task.completed?"✔ (Done)":"❌ (Failed)"}}
-      </td> 
-     
-    </tr>
+      <tr
+        *ngIf="currentStateIs == task.stateId"
+        LightBox
+        [highlightColor]="task.completed ? 'text-bg-success' : 'text-bg-danger'"
+      >
+        <th>{{ i + 1 }}</th>
+        <td>{{ task.title }}</td>
+        <td>{{ task.date | date }}</td>
+        <td>
+          {{ task.completed ? "✔ (Done)" : "❌ (Failed)" }}
+        </td>
+      </tr>
     </ng-container>
-<!--
+    <!--
   [class.table-dark]="!task.completed"
   [ngClass]="{'table-danger': !task.completed}"
   [ngClass]="task.completed ? 'table-success' : 'table-danger' "
   [ngClass]="{'table-success':task.completed, 'table-danger': !task.completed }"
-  -->
-  </tbody>
+  --></tbody>
 </table>
