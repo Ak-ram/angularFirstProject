@@ -10,6 +10,7 @@ import { MainComponent } from './Components/main/main.component';
 import { TasksComponent } from './Components/tasks/tasks.component';
 import { FormsModule } from '@angular/forms';
 import { LightBoxDirective } from './Directives/lightbox.directive';
+import { ReminderPipe } from './Pipes/reminder.pipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { LightBoxDirective } from './Directives/lightbox.directive';
     MainComponent,
     TasksComponent,
     LightBoxDirective,
+    ReminderPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

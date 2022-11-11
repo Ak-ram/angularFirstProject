@@ -39,13 +39,13 @@
       >
         <th>{{ i + 1 }}</th>
         <td>{{ task.title }}</td>
-        <td>{{ task.date | date: "short" }}</td>
+        <td>{{ task.date | ReminderPipe}}</td>
         <td>
           {{ task.completed ? "✔ (Done)" : "❌ (Failed)" }}
         </td>
       </tr>
     </ng-container>
-    
+
     <!--
   [class.table-dark]="!task.completed"
   [ngClass]="{'table-danger': !task.completed}"
