@@ -17,39 +17,4 @@
 </div>
 
 <hr />
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Task</th>
-      <th scope="col">Days left</th>
-      <th scope="col">Status</th>
-    </tr>
-  </thead>
-  <tbody class="table-group-divider">
-    <ng-container *ngFor="let task of taskList; index as i; even as isEven">
-      <!-- [ngClass] = "{
-      'table-success': task.completed,
-      'table-danger': !task.completed
-    }" -->
-      <tr
-        *ngIf="currentStateIs == task.stateId"
-        LightBox
-        [highlightColor]="task.completed ? 'text-bg-success' : 'text-bg-danger'"
-      >
-        <th>{{ i + 1 }}</th>
-        <td>{{ task.title }}</td>
-        <td>{{ task.date | ReminderPipe | uppercase}}</td>
-        <td>
-          {{ task.completed ? "✔ (Done)" : "❌ (Failed)" }}
-        </td>
-      </tr>
-    </ng-container>
-
-    <!--
-  [class.table-dark]="!task.completed"
-  [ngClass]="{'table-danger': !task.completed}"
-  [ngClass]="task.completed ? 'table-success' : 'table-danger' "
-  [ngClass]="{'table-success':task.completed, 'table-danger': !task.completed }"
-  --></tbody>
-</table>
+<app-tasks-list></app-tasks-list>

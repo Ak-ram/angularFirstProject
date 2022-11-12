@@ -11,6 +11,7 @@ import { TasksComponent } from './Components/tasks/tasks.component';
 import { FormsModule } from '@angular/forms';
 import { LightBoxDirective } from './Directives/lightbox.directive';
 import { ReminderPipe } from './Pipes/reminder.pipe';
+import { TasksListComponent } from './Components/tasks-list/tasks-list.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ReminderPipe } from './Pipes/reminder.pipe';
     TasksComponent,
     LightBoxDirective,
     ReminderPipe,
+    TasksListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
